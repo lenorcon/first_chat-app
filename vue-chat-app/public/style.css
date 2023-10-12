@@ -1,42 +1,133 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.chat-container {
-    max-width: 400px;
-    margin: 0 auto;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     padding: 20px;
+    width: 300px;
+    text-align: center;
 }
 
-.chat {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    height: 300px;
-    overflow-y: scroll;
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.chat-messages {
+.tab-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.tab-btn.active {
+    background: #007BFF;
+    color: #fff;
+}
+
+.form h2{
     margin-bottom: 10px;
 }
-
-.chat-input input {
-    width: 80%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-right: 5px;
+.submit{
+    margin-bottom: 5px;
+}
+.submit:hover{
+    color: black;
+    background-color: blue;
 }
 
-.chat-input button {
-    padding: 5px 10px;
-    background-color: #007BFF;
-    color: white;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
     border: none;
-    border-radius: 3px;
+    color: #fff;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.chat-input button:hover {
-    background-color: #0056b3;
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #007BFF;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Responsive Styles (Optional) */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
 }
