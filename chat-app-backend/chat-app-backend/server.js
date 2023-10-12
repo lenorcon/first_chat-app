@@ -16,20 +16,20 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // MySQL setup
-const db = mysql.createConnection({
-  host: 'your-mysql-host',
-  user: 'your-username',
-  password: 'your-password',
-  database: 'chat_app',
-});
+// const db = mysql.createConnection({
+//   host: 'your-mysql-host',
+//   user: 'your-username',
+//   password: 'your-password',
+//   database: 'chat_app',
+// });
 
-db.connect((err) => {
-  if (err) {
-    console.error('Error connecting to MySQL:', err);
-    return;
-  }
-  console.log('Connected to MySQL');
-});
+// db.connect((err) => {
+//   if (err) {
+//     console.error('Error connecting to MySQL:', err);
+//     return;
+//   }
+//   console.log('Connected to MySQL');
+// });
 
 // Socket.io setup
 io.on('connection', (socket) => {
