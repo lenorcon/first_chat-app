@@ -10,8 +10,28 @@
 <body class="light-mode">
     <div class="container">
         <div class="form-container">
+            <div id="chat-app-ui" style="display: none;">
+                <div class="sidebar">
+                    <h2>Contact List</h2>
+                    <ul class="contact-list">
+                        <li class="contact">User 1</li>
+                        <li class="contact">User 2</li>
+                        <li class="contact">User 3</li>
+                        <li class="contact">User 4</li>
+                        <li class="contact">User 5</li>
+                    </ul>
+                </div>
+                <div class="chat">
+                    <!-- Chat messages and conversation area goes here -->
+                </div>
+                <div class="input-area">
+                    <input type="text" id="message-input" placeholder="Type your message..." required>
+                    <button class="send-button">Send</button>
+                </div>
+            </div>
+           
             <div class="tabs">
-                <button class="tab-btn active" id="login-tab">Login</button>
+                <!-- <button class="tab-btn active" id="login-tab">Login</button> -->
                 <button class="tab-btn" id="register-tab">Register</button>
             </div>
             <div class="form">
@@ -20,7 +40,8 @@
                     <input type="text" placeholder="Username" required>
                     <input type="password" placeholder="Password" required>
                     <button class="submit" id="login-btn">Login</button>
-                    <a href="createaccount" id="create-account-btn">Create Account</a>
+                    <a href="#" id="create-account-link">Create Account</a>
+                    <p id="error-message" style="color: red; display: none;">Wrong username or password</p>
                 </form>
                 <form id="register-form"  style="display: none;">
                     <h2>Register</h2>
@@ -33,7 +54,26 @@
             </div>
         </div>
     </div>
-    
+    <div id="chat-app-ui" style="display: none;">
+        <div class="sidebar">
+            <h2>Contact List</h2>
+            <ul class="contact-list">
+                <li class="contact">User 1</li>
+                <li class="contact">User 2</li>
+                <li class="contact">User 3</li>
+                <li class="contact">User 4</li>
+                <li class="contact">User 5</li>
+            </ul>
+        </div>
+        <div class="chat">
+            <!-- Chat messages and conversation area goes here -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="Type your message..." required>
+            <button class="send-button">Send</button>
+        </div>
+    </div>
+
     <div class="toggle-container">
         <label class="switch">
             <input type="checkbox" id="toggle">
